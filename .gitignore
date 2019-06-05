@@ -54,4 +54,6 @@ venv/
 ########
 *.bak
 .vagrant
-
+.terraform
+terraform.tfstate
+terraform.tfvars
