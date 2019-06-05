@@ -59,3 +59,6 @@ to add an ingress service to the previously created nginx workload, go to "workl
 
 click _Launch_ to create the ingress
 
+## launch app
+App's can be launched from a previously configured _library_, which is based on Helm charts.  
+Go to "Apps"=>"Launch" and search for _Wordpress (Library)_ . By default also a MariaDB will be installed as well, as well as secrets/configmaps and ingress
