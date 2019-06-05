@@ -36,3 +36,26 @@ After a short ramp-up time, your cluster will be shown in the Rancher dashboard:
 you can also
 * provision K8s on a public cloud infrastructure via Rancher
 * provision Rancher in an already running K8s cluster
+
+## Rancher "project"
+is an abstract entity, not K8s related.  
+It is used to enable multi-tenancy within a Rancher setup. Project permissions are based on the members of the project, but underlying separation is mainly based on namespaces. E.g. on cluster creation time, if you specify "custom"-cluster you can enable/disable "Project Network Isolation", which of course requires a network overlay type that supports this.
+
+## deploy a workload
+deploy example workload _nginx_  
+![workload-nginx](pics/deploy-workload.png)
+
+* NodePort type, Mapping from port *80* to e.g. _random_ , or _30000_
+
+![workload-done](pics/deploy-workload-2.png)
+
+now open browser and go to http://<your-instance-public-ip>:30000
+
+
+## add ingress
+to add an ingress service to the previously created nginx workload, go to "workload"=>"Load balancing"=>"add ingress"   
+
+![nginx-ingress](pics/ingress-1.png)
+
+click _Launch_ to create the ingress
+
