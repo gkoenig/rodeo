@@ -1,4 +1,4 @@
-#Rancher Rodeo workshop Stuttgart, June 5th 2019
+# Rancher Rodeo workshop Stuttgart, June 5th 2019
 
 the terraform setup for AWS does not work (subnet issues), hence create an EC2 instance manually und use that one. Characteristics:
 * CentOS AMI
