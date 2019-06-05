@@ -61,4 +61,8 @@ click _Launch_ to create the ingress
 
 ## launch app
 App's can be launched from a previously configured _library_, which is based on Helm charts.  
-Go to "Apps"=>"Launch" and search for _Wordpress (Library)_ . By default also a MariaDB will be installed as well, as well as secrets/configmaps and ingress
+Go to "Apps"=>"Launch" and search for _Wordpress (Library)_ . By default also a MariaDB will be installed as well (on *non-persistent* volume), as well as secrets/configmaps and ingress
+
+from default library there is also a (experimental) NFS provisioner available, to add a nfs-storage provisioner class.
+Add this provisioner to your sandbox, followed by re-configuring the Wordpress app to specify _MariaDB_ to use persistent volume. Then choose your nfs provisioner, and click "Upgrade" for the wordpress app.
+
