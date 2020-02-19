@@ -130,6 +130,8 @@ resource "aws_instance" "rancherserver" {
   instance_type   = "${var.type}"
   key_name        = "${var.ssh_key_name}"
   security_groups = ["${aws_security_group.rancher_sg_allowall.name}"]
+  subnet_id       = "subnet-a1ed0efa"
+  #vpc_security_group_ids = ["vpc-41577026"]
   user_data       = "${data.template_cloudinit_config.rancherserver-cloudinit.rendered}"
 
   tags = {
